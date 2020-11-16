@@ -1,7 +1,6 @@
 # Descripción
 ````
-Aplicación MEAN (Mongo, Express, Angular y Node) de registro 
-de médicos y hospitales. 
+Aplicación MEAN (Mongo, Express, Angular y Node) de registro de médicos y hospitales. 
 Proyecto final del curso: 1570 Desarrollo de aplicaciones con tecnología web
 ````
 
