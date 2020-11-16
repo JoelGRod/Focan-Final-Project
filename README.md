@@ -30,9 +30,16 @@ para la carga de imagenes
 /express-server/uploads/hospitals
 ```
 ```
-5 - Generar el docker-compose
-Dentro del directorio principal ejecutar: docker-compose up --build
-Esto generará las imagenes y desplegará el proyecto en local
+5 - Crear las imagenes por separado o mediante el docker compose
+  Método 1 - Por separado:
+    En angular-client/
+      docker build -t joelgrod/mean-docker-angular .
+    En express-server/
+      docker build -t joelgrod/mean-docker-angular .
+  Método 2 - Usando docker-compose (archivo.yml ya creado):
+    En la carpeta principal del proyecto: 
+      docker-compose up --build
+    Esto generará las imagenes y desplegará el proyecto en local
 ```
 A partir de aquí guardar las imagenes en docker hub y desplegarlas
 en el servidor mediante un docker-compose.yml con el siguiente contenido:
