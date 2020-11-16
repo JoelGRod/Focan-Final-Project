@@ -16,5 +16,12 @@ Contenido de .env:
 * GOOGLE_ID=Clave del proyecto de Google para consumir sus Apis (Google Cloud)
 ```
 ```
-2 - Dentro del directorio principal ejecutar: docker-compose up --build
+2 - En express-server/uploads crear las carpetas users, hospitals y doctors
+/express-server/uploads/users
+/express-server/uploads/doctors
+/express-server/uploads/hospitals
+Para la persistencia de imagenes
+```
+```
+3 - Dentro del directorio principal ejecutar: docker-compose up --build
 ```
