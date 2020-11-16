@@ -1,0 +1,108 @@
+<div class="row animated fadeIn">
+    <!-- Users Card -->
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Users</h3>
+
+                <div *ngIf="users.length === 0" class="alert alert-info animated fadeIn">
+                    <!-- <h4 class="alert-heading"> No users found </h4>
+                    <p></p> -->
+                    <p class="mb-0">Users not Found</p>
+                </div>
+
+                <div *ngIf="users.length !== 0" class="table-responsive animated fadeIn">
+                    <table class="table color-table primary-table">
+                        <thead>
+                            <tr>
+                                <th class="text-center w75">Avatar</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users" class="animated fadeIn slow">
+                                <td class="text-center">
+                                    <img [src]="user.img | image: 'users'" class="w75" [alt]="user.name">
+                                </td>
+                                <td>{{ user.name }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Hospitals Card -->
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Hospitals</h3>
+
+                <div *ngIf="hospitals.length === 0" class="alert alert-info animated fadeIn">
+                    <!-- <h4 class="alert-heading"> No users found </h4>
+                    <p></p> -->
+                    <p class="mb-0">Hospitals not Found</p>
+                </div>
+
+                <div *ngIf="hospitals.length !== 0" class="table-responsive animated fadeIn">
+                    <table class="table color-table primary-table">
+                        <thead>
+                            <tr>
+                                <th class="text-center w75">Photo</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let hospital of hospitals" class="animated fadeIn slow">
+                                <td class="text-center">
+                                    <img [src]="hospital.img | image: 'hospitals'" class="w75" [alt]="hospital.name">
+                                </td>
+                                <td>{{ hospital.name }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Doctors Card -->
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Doctors</h3>
+                <p>Click on doctor to modify it</p>
+
+                <div *ngIf="doctors.length === 0" class="alert alert-info animated fadeIn">
+                    <!-- <h4 class="alert-heading"> No users found </h4>
+                    <p></p> -->
+                    <p class="mb-0">Doctors not Found</p>
+                </div>
+
+                <div *ngIf="doctors.length !== 0" class="table-responsive animated fadeIn">
+                    <table class="table color-table primary-table">
+                        <thead>
+                            <tr>
+                                <th class="text-center w75">Photo</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let doctor of doctors" 
+                                class="my-cursor-pointer animated fadeIn slow" 
+                                (click)="openDoctor(doctor)" >
+                                <td class="text-center">
+                                    <img [src]="doctor.img | image: 'doctors'" class="w75" [alt]="doctor.name">
+                                </td>
+                                <td>{{ doctor.name }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

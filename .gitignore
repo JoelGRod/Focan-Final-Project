@@ -1,0 +1,4 @@
+.DS_STORE
+/angular-client/node_modules/
+/express-server/node_modules/
+/express-server/.env

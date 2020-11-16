@@ -1,0 +1,24 @@
+<div class="row animated fadeIn fast">
+    <div class="col-6">
+        <app-doughnut title = "Grafica 1"></app-doughnut>
+    </div>
+    <div class="col-6">
+        <app-doughnut
+            [labels] = "newLabels"
+            [data] = "newData"
+            title = "Grafica 2">
+        </app-doughnut>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <app-doughnut 
+            title = "Grafica 3"
+            [labels] = "newLabels"
+            [data] = "newData">
+        </app-doughnut>
+    </div>
+    <div class="col-6">
+        <app-doughnut title = "Grafica 4"></app-doughnut>
+    </div>
+</div>
